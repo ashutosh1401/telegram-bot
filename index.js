@@ -11,6 +11,7 @@ telegram.on("text", (message) => {
         "/memes  :-link to the official memes page\n\n" +
         "/movies  :-provides link to telegram movie channels\n\n" +
         "/music  :-provides audio songs available\n\n" +
+        "/poll  :-Click here for daily Polls\n\n" +
         "/institute  :-To know about IIIT Surat"
     );
   }
@@ -98,5 +99,16 @@ telegram.on("text", (message) => {
     );
   }
 });
-
+telegram.on("text", (message) => {
+  if (message.text && message.text.toLowerCase().includes("/poll")) {
+    telegram.sendPoll(message.chat.id, "How do to you rate this bot ?", [
+      "Very Good",
+      "Good",
+      "Average",
+      "need Improvement",
+      "Very Bad",
+    ]);
+    telegram.sendDice(message.chat.id);
+  }
+});
 telegram.on("polling_error", (msg) => console.log(msg));
