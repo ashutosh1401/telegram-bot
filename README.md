@@ -5,7 +5,7 @@ This bot is made with the help of npm module [node-telegram-bot-api](https://www
 ## Installation
 
 After cloning the repository into your desktop
-use the npm(Node Package Manager) write the following commands
+use the npm(Node Package Manager) write the following commands in your cmd(windows) or terminal(Mac/Linux)
 
 ```bash
 npm install
