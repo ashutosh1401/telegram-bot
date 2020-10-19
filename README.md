@@ -1,6 +1,7 @@
 # Telegram-Bot
 
-This bot is made with the help of npm module [node-telegram-bot-api](https://www.npmjs.com/package/node-telegram-bot-api) and written in nodejs
+This bot is made with the help of npm module [node-telegram-bot-api](https://www.npmjs.com/package/node-telegram-bot-api) and written in nodejs.
+To create a Bot please get API token form botfather.
 
 ## Installation
 
