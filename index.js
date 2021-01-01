@@ -12,7 +12,8 @@ telegram.on("text", (message) => {
         "/movies  :-provides link to telegram movie channels\n\n" +
         "/music  :-provides audio songs available\n\n" +
         "/poll  :-Click here for daily Polls\n\n" +
-        "/institute  :-To know about IIIT Surat"
+        "/institute  :-To know about IIIT Surat\n\n" +
+        "/clubs  :- To Know about clubs of the institute"
     );
   }
 });
@@ -111,4 +112,27 @@ telegram.on("text", (message) => {
     telegram.sendDice(message.chat.id);
   }
 });
+telegram.on("text", (message) => {
+  if(message.text && message.text.toLowerCase().includes("/clubs")) {
+    telegram.sendMessage(
+      message.chat.id,
+      "This our clubs of IIIT Surat\n\n\n" +
+      "/dsc :- is our Developer Students Club.\n\n" +
+      "/robotics :- is our robotics club. \n\n" + 
+      "/ruminate :- is our E-Cell\n\n" + 
+      "/lcs :- is our coding club\n\n"
+    )
+  }
+})
+telegram.on("text", (message) => {
+  if(message.text && message.text.toLowerCase().includes("/dsc")) {
+    telegram.sendMessage(message.chat.id, 
+      "DSC stands for Developer Students Club\n" +
+      "This is powered by Google with main motive to reduce theoritical and practical experience of students.\n" +
+      "Follow our YouTube Channel https://www.youtube.com/channel/UCjlWTzY2JYD20odrItqn0MA \n"
+      )
+      telegram.sendVideo(message.chat.id, "DSC.mp4")
+  }
+})
+
 telegram.on("polling_error", (msg) => console.log(msg));
